@@ -1,15 +1,9 @@
-<?php
-//all companies list with API 
-?>
 <!DOCTYPE html>
 <html lang=en>
 <head>
     <title>companies</title>
     <meta charset=utf-8>
     <link href="css/style.css" rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
 </head>
 <body >
     <section>
@@ -22,28 +16,15 @@
             </div>
         </div>
     </section>
-    <main class="ui segment doubling stackable grid container">
-        <section class="four wide column">
-            <form class="ui form" method="get" >
-
-            <div class="field">
-                <label>Company</label>
-                <select class="ui fluid dropdown" name="museum">
-                    <option value='0'>Select Company</option>  
-                    <?php  
-                    //put loop here to output the list of comapanies for now
-
-                    ?>
-                </select>
-            </div>   
-            <button class="small ui orange button" type="submit">
-                <i class="filter icon"></i> Filter 
-            </button>    
-            </form>
-        </section>
-        <section class="twelve wide column">
-
-        </section>  
+    <div class="box b" id="companies">
+        <h3>List of Companies</h3>
+        <span id="filter"><label>Filter: </label><input type="text" id="search-box"></span>
+        <p>
+            <button type="submit" id="submit">Go</button>
+            <button type="reset" id="reset">Clear</button>
+        </p>
+    </div>
     </main>
 </body>
+<script type="text/javascript" src="list.js"></script>
 </html>
