@@ -34,6 +34,7 @@ header a {
 h2 {
     margin: 0;
     padding: 0;
+    font-size: 2.5em;
 }
 
 p {
@@ -42,12 +43,6 @@ p {
 
 .container {
     display: grid;
-    height: 88vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr 2fr 2fr;
-    grid-gap: 10px;
-    padding: 10px;
-    margin-top: var(--nav-height);
 }
 
 .container > div {
@@ -57,7 +52,7 @@ p {
 .button-label {
     display: inline-block;
     background-color: var(--blue);
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 10px 20px;
     color: black;
 
@@ -78,26 +73,65 @@ p {
     padding: 15px 50px;
 }
 
+.banner-button {
+   margin: 0px 40px;     
+}
+
 .large {
-    font-size: 16pt;
+    font-size: 1.5em;
 }
 
 .small {
-    font-size: 8pt;
+    font-size: 0.6em;
+}
+
+#main-container {
+    height: 88vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    margin-top: var(--nav-height);
 }
 
 #welcome-banner {
-    grid-row: 1 / 2; 
-
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
     text-align: center;
 }
 
 #companies-banner {
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+    padding: 60px 20px;
+}
+
+#companies-banner a {
+    background-image: url(../images/magnifying-glass-icon.png);
+    background-size: 70px;
+    background-position: 50%;
+    background-repeat: no-repeat;
 }
 
 #about-banner {
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    padding: 60px 20px;
+
+    text-align: right;
+}
+
+#about-banner a {
+    background-image: url(../images/book-icon.png);
+    background-size: 70px;
+    background-position: 50%;
+    background-repeat: no-repeat;
 }
 
 #hamburger-button {
@@ -136,6 +170,11 @@ p {
     background-color: var(--dark-blue);
 }
 
+
+.banner a {
+    font-size: 1.5em;
+}
+
 @media (max-width: 813px) {
     :root {
         --nav-height: 100px;
@@ -145,6 +184,10 @@ p {
         margin: 30px 20px;
     }
 
+    .banner-button {
+        margin: 0px;     
+     }
+
     #hamburger-button {
         background-size: 50px;
         padding: 50px;
@@ -152,5 +195,26 @@ p {
 
     #hamburger-menu {
         width: 45%;
+    }
+
+    #main-container {
+        height: 88vh;
+        grid-template-rows: 2fr 3fr 3fr;
+        grid-template-columns: 1fr;
+    }
+
+    #welcome-banner {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    #companies-banner {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    #about-banner {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
     }
 }

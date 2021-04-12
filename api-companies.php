@@ -16,6 +16,7 @@ try {
         $companies = $result -> fetchAll(PDO::FETCH_ASSOC);
     }
     
+    header("Content-Type: JSON");
     echo "[";
     foreach ($companies as $key => $value) {
         echo "{";

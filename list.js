@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded",function(){  
-    const url='api-companies.php';
+    const url='http://localhost/asg2/COMP3512---Asg-2/api-companies.php';
 
     //loading local storage  
     let localData;

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('#hamburger-button').addEventListener("click", () => {
         const menu = document.querySelector('#hamburger-menu');
 
-        if (menu.style.display == "none") {
+        if (menu.style.display != "flex") {
             menu.style.display = "flex";
             return;
         }
