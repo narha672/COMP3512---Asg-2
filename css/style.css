@@ -37,6 +37,46 @@ body {
   float: right;
 }
 
+/*=====box styling=========*/
+.box {
+  color: black;
+  padding: 20px;
+  font-size: 150%;
+  display: block;
+  /*--reference taken from https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
+   box-shadow: 0 1px 4px rgba(153, 22, 22, 0.4), 0 0 40px rgba(131, 3, 3, 0.2) inset;
+  }
+
+  .b {
+    grid-column: 1 / span 1;
+    grid-row: 1  /  span 1;
+    height: 1100px;
+    }
+  
+    div.b section {	 
+      grid-gap: 44px;
+      position: relative;
+      right: 10px;
+      
+    }
+
+    #StockList {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 306px;
+      height: 1000px;
+      overflow: scroll;
+    }
+
+
+
+
+
+
+
+
+/* media screen */
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -47,4 +87,6 @@ body {
   .header-right {
     float: none;
   }
+
+  
 }
