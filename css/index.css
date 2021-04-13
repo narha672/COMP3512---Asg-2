@@ -110,7 +110,7 @@ p {
 }
 
 #companies-banner a {
-    background-image: url(../images/magnifying-glass-icon.png);
+    background-image: url(../img/images/magnifying-glass-icon.png);
     background-size: 70px;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -128,7 +128,7 @@ p {
 }
 
 #about-banner a {
-    background-image: url(../images/book-icon.png);
+    background-image: url(../img/images/book-icon.png);
     background-size: 70px;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -137,7 +137,7 @@ p {
 #hamburger-button {
     float: right;
     background-color: var(--blue);
-    background-image: url(../images/hamburger-icon.png);
+    background-image: url(../img/images/hamburger-icon.png);
     background-size: 40px;
     background-position: 50%;
     background-repeat: no-repeat;
