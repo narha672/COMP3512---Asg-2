@@ -1,0 +1,126 @@
+/* CSS for the favourites page */
+
+:root {
+    --grey: #d7dbdb;
+    --dark-grey: #858b8d;
+    --blue: rgb(95, 148, 216);
+    --dark-blue: rgb(88, 111, 212);
+    --nav-height: 80px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--grey);
+    width: 100%;
+    height: var(--nav-height);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+}
+
+header a {
+    display: inline-block;
+    margin: 20px 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+}
+
+p {
+    margin: 3px 0px;
+}
+
+.container {
+    display: grid;
+}
+
+.container > div {
+    background-color: var(--grey);
+}
+
+.fav-card {
+    grid-template-columns: 1fr 2fr .5fr;
+    background: var(--grey);
+    margin-top: 20px;
+    vertical-align: middle;
+}
+
+.fav-card h3 {
+    font-size: 1em;
+}
+
+.fav-card img {
+    max-width: 100px;
+    padding: 10px;
+}
+
+#hamburger-button {
+    float: right;
+    background-color: var(--blue);
+    background-image: url(../img/images/hamburger-icon.png);
+    background-size: 40px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    /* background-color: var(--blue); */
+    padding: 40px;
+    margin: 0;
+}
+
+#hamburger-button:hover {
+    background-color: var(--dark-blue);
+}
+
+#hamburger-menu {
+    background-color: var(--blue);
+    right: 0px;
+    width: 20%;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+}
+
+#hamburger-menu span {
+    width: 100%;
+    padding: 20px 50px 20px 20px;
+}
+
+#hamburger-menu span:hover {
+    background-color: var(--dark-blue);
+}
+
+#main {
+    margin-top: var(--nav-height);
+    padding: 10px;
+}
+
+@media (max-width: 813px) {
+    :root {
+        --nav-height: 100px;
+    }
+
+    header a {
+        margin: 30px 20px;
+    }
+
+    #hamburger-button {
+        background-size: 50px;
+        padding: 50px;
+    }
+
+    #hamburger-menu {
+        width: 45%;
+    }
+}

@@ -27,20 +27,22 @@
         </form>
     </div>
 
-<div style="overflow:auto">
-    <div id="zoom-div"><img id="zoom-image" src="http://localhost/stock/img/logos/A.svg"></div>
-    <div id="loading" style="text-align:center;width:100px;height:100px;"><img style="width:80px;height: 80px;object-fit:cover;text-align:center;" src="img/loading.gif"></div>
-    <table id="list-table">
-        <thead>
-            <tr>
-                <th colspan="2">Symbol</th>
-                <th>Name</th>
-            </tr>
-        </thead>
-        <tbody id="tbody">
-        </tbody>
-    </table>
-</div>
+    <!-- <div id="list-container" style="overflow: none;"> -->
+    <!-- style="height: 700px; overflow-y: scroll" -->
+        <div id="zoom-div"><img id="zoom-image" src="http://localhost/stock/img/logos/A.svg"></div>
+        <div id="loading" style="text-align:center;width:100px;height:100px;"><img style="width:80px;height: 80px;object-fit:cover;text-align:center;" src="img/loading.gif"></div>
+        <table id="list-table"  style="height: 720px; overflow-y: scroll;">
+            <thead>
+                <tr>
+                    <th>Logo</th>
+                    <th>Symbol</th>
+                    <th colspan="2">Name</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    <!-- </div> -->
 
     <script src="js/list.js"></script>
 </body>

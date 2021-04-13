@@ -38,9 +38,17 @@ function getCompaniesList(){
 
 function tableRows(data){
     var innerHTML = '';
+    let darker = false;
     for(var i = 0; i < data.length ; i++){
         var val = data[i];
-        innerHTML += '<tr><td><img onmouseleave="hideBig(this)" onmouseenter="bigLogo(this)" src="img/logos/'+val.symbol+'.svg"></td><td><a href="single-company.php?symbol='+val.symbol+'">'+val.symbol+'</a></td><td>'+val.name+'</td></tr>';
+        if (darker) {
+            innerHTML += '<tr class="darker"><td class="td-logo"><img onmouseleave="hideBig(this)" onmouseenter="bigLogo(this)" src="img/logos/'+val.symbol+'.svg"></td><td><a href="single-company.php?symbol='+val.symbol+'">'+val.symbol+'</a></td><td>'+val.name+'</td></tr>';
+            darker = false;
+        } else {
+            innerHTML += '<tr><td class="td-logo"><img onmouseleave="hideBig(this)" onmouseenter="bigLogo(this)" src="img/logos/'+val.symbol+'.svg"></td><td><a href="single-company.php?symbol='+val.symbol+'">'+val.symbol+'</a></td><td>'+val.name+'</td></tr>';
+            darker = true;
+        }
+        
     }
     tbody.innerHTML = innerHTML;
     table.style.display = 'block';

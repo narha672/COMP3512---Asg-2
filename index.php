@@ -31,7 +31,7 @@
                 <p class="small">Already have an account? Log in!</p>
                 <?php
                     if(isset($_SESSION[("is_user_logged_in")])){
-                        echo "<a href= 'favourites.php' class='button-label'>Favourites</a>";
+                        echo "<a href='favourites.php' class='button-label'>Favourites</a>";
                         echo "<a href= 'profile.php' class= 'button-label'>Profile</a>";
                         echo "<a href= 'portfolio.php' class= 'button-label'>Portfolio</a>";
                         echo "<a href= 'logout.php' class= 'button-label'>Logout</a>";

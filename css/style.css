@@ -113,15 +113,34 @@ body {
 
   /* table css  */
   table {
-    width: 100%;
     border-collapse: collapse;
     padding-left: 5%;
     padding-right: 5%;
+    text-align: center;
+    margin: auto;
   }
-  table, th, td {
+
+  th, td {
     border: 1px solid black;
     padding: 5px;
+    margin: auto;
   }
+
+  .td-logo {
+    max-width: 300px;
+  }
+  .td-logo img {
+    max-width: 280px;
+  } 
+  @media only screen and (max-width:620px) {
+    .td-logo {
+      max-width: 120px;
+    }
+    .td-logo img {
+      max-width: 100px;
+    } 
+  } 
+
   thead {
       background-color: #4CAF50;
       color: white;
@@ -162,4 +181,13 @@ body {
       object-fit: cover;
       z-index: 1;
       top: 0px;
+  }
+
+  #list-container {
+    height: 800px;
+  }
+
+  .darker {
+    background-color: rgb(202, 202, 202);
+    padding: 0;
   }

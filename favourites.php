@@ -1,4 +1,4 @@
-<?php require_once('config.inc.php');
+<?php require_once('./php/config.inc.php');
 try {
     $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS); 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -8,13 +8,15 @@ try {
         $fav = $_SESSION["favourites"];
     }
 
+    $fav = ["A", "AAPL"];
+
     $sql = 'SELECT name, symbol FROM companies WHERE symbol IN (';
-    foreach ($i = 0; $i < count($fav); $i++) {
-        $sql = $sql . "'{$fav[$i]}'";
-        if (array_key_exists($i + 1, $fav))
-            echo ", ";
+    for ($i = 0; $i < count($fav); $i++) {
+        $sql = $sql . "'{$fav[$i]}', ";
+        // if (array_key_exists($i + 1, $fav))
+        //     echo ", ";
     }
-    $sql = $sql . ') ORDER BY symbol';
+    $sql = $sql . "'') ORDER BY symbol";
 
     $result = $pdo -> query($sql);
     $companies = $result -> fetchAll();
@@ -51,7 +53,7 @@ try {
                     $name = $value["name"];
 
                     echo '<div class="container fav-card" id="' . $sym . '">';
-                    echo    '<a href="company.php?symbol=' . $sym . '" class="fav-logo" style="background-image: url(./logos/' . $sym . '.svg);"></a>';
+                    echo    '<img src="./img/logos/' . $sym . '.svg">';
                     echo    '<div class="fav-info">';
                     echo        '<h3 class="fav-name">' . $name . '</h3>';
                     echo        '<p class="fav-symbol">' . $sym . '</p>';
@@ -60,7 +62,7 @@ try {
                     echo '</div>';
                 }
                 // Remove All Button
-                echo '<a href="./removeFromFavourites.php?all=y'. $sym .'" id="remove-all-button"></a>';
+                echo '<a href="./removeFromFavourites.php?all=y" id="remove-all-button"></a>';
 
             }
             ?>
