@@ -1,4 +1,5 @@
 <?php
+    //starting login session
     session_start();
 ?>
 <!DOCTYPE html>
@@ -14,33 +15,39 @@
             <a href="./index.php">Logo</a>
             <span id="hamburger-button"></span>
         </header>
+        <!--dropdown menu bar-->
         <div id="hamburger-menu" style="display:none;">
-            <span><a href="index.php">Home</a><span>
-            <span><a href="list.php">Companies</a><span>
-            <span><a>Favourites</a><span>
-            <span><a>Login</a></span>
-            <span><a>Logout</a></span>
-            <span><a>Credits</a></span>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="list.php">Companies</a></li>
+            <li><a href="favourites.php">Favourites</a></li>
+            <li><a href="portfolio.php">Portfolio</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="logout.php">Logout</a></li>
+            <li><a href="about.php">Credits</a></li>
         </div>
 
         <div class="container" id="main-container">
             <div id="welcome-banner" class="banner">
                 <h2>Welcome!</h3>
                 <p class="large" style="margin: 10px;">Want to keep track of your favourite companies?</p>
+                <!--allows links for the different pages to be visible in the form of buttons-->
                 <?php
                     if(isset($_SESSION[("is_user_logged_in")])){
                         echo "<a href='favourites.php' class='button-label'>Favourites</a>";
                         echo "<p class='small'>All your favorite companies in one place</p>";
-                        echo "</br></br>";
+                        echo "</br>";
                         echo "<a href= 'profile.php' class= 'button-label'>Profile</a>";
-                        echo "</br></br>";
+                        echo "<p class='small'>Coming soon!</p>";
+                        echo "</br>";
                         echo "<a href= 'portfolio.php' class= 'button-label'>Portfolio</a>";
-                        echo "</br></br>";
+                        echo "<p class='small'>Check out your companies and their profiles</p>";
+                        echo "</br>";
                         echo "<a href= 'logout.php' class= 'button-label'>Logout</a>";
                     }
                     else{
                         echo "<a href='registration.php' class='button-label'>Register</a>";
                         echo "<p class='small'>Already have an account? Log in!</p>";
+                        echo "</br>";
                         echo "<a href= 'login.php' class= 'button-label'>Login</a>"; 
                     }
                 ?>
@@ -57,7 +64,7 @@
                     <h3>About Us!</h3>
                     <p>To learn more about how the project was created, go to about us!</p>
                 </div>
-                <a class="button-label banner-button"></a>
+                <a href="about.php" class="button-label banner-button"></a>
             </div>
 
         </div>

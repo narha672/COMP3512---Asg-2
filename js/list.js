@@ -14,16 +14,19 @@ loading.style.display = 'block';
 var companies = [];
 getCompaniesList();
 
+//filter button to filter through the companies
 filterForm.addEventListener("submit", function(event){
     event.preventDefault()
     getCompaniesList();
 });
 
+//clear button to clear the form 
 btnClear.addEventListener("click", function(event){
     symbol.value = '';
     getCompaniesList();
 });
 
+//shows the full list of companies 
 function getCompaniesList(){
     fetch('php/api-companies.php', {
         method: 'POST',
@@ -36,6 +39,7 @@ function getCompaniesList(){
     .catch(error => console.error('Error:', error));
 }
 
+//shows the table of company financials data 
 function tableRows(data){
     var innerHTML = '';
     let darker = false;
@@ -55,6 +59,7 @@ function tableRows(data){
     loading.style.display = 'none';
 }
 
+//function for zooming in to the logo 
 function bigLogo(event){
     zoomDiv.style.left = window.event.clientX+"px";
     zoomDiv.style.top = window.event.clientY+"px";
@@ -62,6 +67,7 @@ function bigLogo(event){
     zoomImg.src = event.src;
 }
 
+//function when zooing out of the logo
 function hideBig(event){
     zoomDiv.style.left = "0px";
     zoomDiv.style.top = "0px";

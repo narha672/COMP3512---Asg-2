@@ -19,18 +19,22 @@
             <a href="./index.php">Logo</a>
             <span id="hamburger-button"></span>
         </header>
+        <!--dropdown menu bar-->
         <div id="hamburger-menu" style="display:none;">
-            <span><a href="index.php">Home</a><span>
-            <span><a href="list.php">Companies</a><span>
-            <span><a>Favourites</a><span>
-            <span><a>Login</a></span>
-            <span><a>Logout</a></span>
-            <span><a>Credits</a></span>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="list.php">Companies</a></li>
+            <li><a href="favourites.php">Favourites</a></li>
+            <li><a href="portfolio.php">Portfolio</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="logout.php">Logout</a></li>
+            <li><a href="about.php">Credits</a></li>
         </div>
+        
         <main>
         </br></br></br></br></br></br></br>
+        <!-- email and password field for logging into your account -->
         <!-- taken from w3schools https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_password-->
-        <form action="action.php" method="POST" style="background-color:lightgrey;text-align:center; border-style: solid; padding: 35px; margin-right:450px;margin-left:450px;">
+        <form action="action.php" method="POST" style="background-color:lightblue;text-align:left; border-style: solid; padding: 35px; margin-left:50px; margin-right:50px;">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email"><br><br>
             <label for="pwd">Password:</label>

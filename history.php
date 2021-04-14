@@ -24,8 +24,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Our style sheet  -->
         <link rel="stylesheet" href="css/style.css">
-        <!-- font awesome icon  -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <!-- Top Navigation Menu -->
@@ -38,7 +36,7 @@
         <div style="background-color:#e5e5e5;padding:10px;text-align:center;">
             <h1>Company History</h1>
         </div>
-
+    <!--shows the tables of values for date, open, close, high, low and volume -->
     <div style="overflow:auto">
         <div class="single-main">
             <img style="object-fit:cover;height:70px;width:auto;padding:2px;" src="img/logos/<?=$company["symbol"].'.svg'?>">

@@ -1,9 +1,11 @@
 <?php
     require_once('./php/config.inc.php');
     session_start();
+
     $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS); 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
+    //checks if user is logged in 
     if (checkUserLogin($pdo)){
         $_SESSION["is_user_logged_in"] = true;
         header("location: index.php");
@@ -14,6 +16,7 @@
         exit();
     }
     
+    //logs into account when checks for email and password 
     function checkUserLogin($pdo){
         if(!isset($_POST['email'])){
             return false; 

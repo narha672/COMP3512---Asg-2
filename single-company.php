@@ -12,10 +12,8 @@ $company = $statement->fetch(PDO::FETCH_ASSOC);
 <head>
     <title>Stock Browser</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Our style sheet  -->
+    <!-- style sheet  -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- font awesome icon  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Top Navigation Menu -->
@@ -29,6 +27,7 @@ $company = $statement->fetch(PDO::FETCH_ASSOC);
         <h1>Company</h1>
     </div>
 
+    <!--single company.php table -->
 <div style="overflow:auto">
     <div class="single-main">
         <img style="object-fit:cover;height:70px;width:auto;padding:2px;" src="img/logos/<?=$company["symbol"].'.svg'?>">

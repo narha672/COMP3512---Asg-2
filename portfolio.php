@@ -29,13 +29,15 @@ if ($_SESSION["is_user_logged_in"]) {
             <a href="./index.php">Logo</a>
             <span id="hamburger-button"></span>
         </header>
+        <!--dropdown menu bar-->
         <div id="hamburger-menu" style="display:none;">
-            <span><a href="index.php">Home</a><span>
-            <span><a href="list.php">Companies</a><span>
-            <span><a>Favourites</a><span>
-            <span><a>Login</a></span>
-            <span><a>Logout</a></span>
-            <span><a>Credits</a></span>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="list.php">Companies</a></li>
+            <li><a href="favourites.php">Favourites</a></li>
+            <li><a href="portfolio.php">Portfolio</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="logout.php">Logout</a></li>
+            <li><a href="about.php">Credits</a></li>
         </div>
 
         <div id="main">
