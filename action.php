@@ -27,6 +27,7 @@
             $statement->bindValue(":email", $_POST['email']);$statement -> execute();
             $users = $statement->fetch(PDO::FETCH_ASSOC);
 
+            //checks for password to the inputted user id
             if(isset($_POST['password'])){
                 $userpass = $_POST['password'];
                 if ( password_verify($userpass, $users['password'])){
