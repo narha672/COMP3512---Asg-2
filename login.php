@@ -11,8 +11,8 @@
     <head>
         <title>index</title>
         <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport"/>
-        <link rel="stylesheet" href=""/>
-        <!-- <script src="js/index.js"></script> -->
+        <link rel="stylesheet" href="css/index.css"/>
+        <script src="js/index.js"></script> 
     </head>
     <body>
         <header>
@@ -27,9 +27,10 @@
             <span><a>Logout</a></span>
             <span><a>Credits</a></span>
         </div>
-
+        <main>
+        </br></br></br></br></br></br></br>
         <!-- taken from w3schools https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_password-->
-        <form action="action.php" method="POST">
+        <form action="action.php" method="POST" style="background-color:lightgrey;text-align:center; border-style: solid; padding: 35px; margin-right:450px;margin-left:450px;">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email"><br><br>
             <label for="pwd">Password:</label>
@@ -37,7 +38,7 @@
             <input type="submit">
         </form>
 
-    
+        </main>
     </body>
 </html>
 
