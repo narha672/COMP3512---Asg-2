@@ -27,18 +27,21 @@
             <div id="welcome-banner" class="banner">
                 <h2>Welcome!</h3>
                 <p class="large" style="margin: 10px;">Want to keep track of your favourite companies?</p>
-                <a href="./index.php" class="button-label">Register</a>
-                <p class="small">Already have an account? Log in!</p>
                 <?php
                     if(isset($_SESSION[("is_user_logged_in")])){
                         echo "<a href='favourites.php' class='button-label'>Favourites</a>";
+                        echo "<p class='small'>All your favorite companies in one place</p>";
+                        echo "</br></br>";
                         echo "<a href= 'profile.php' class= 'button-label'>Profile</a>";
+                        echo "</br></br>";
                         echo "<a href= 'portfolio.php' class= 'button-label'>Portfolio</a>";
+                        echo "</br></br>";
                         echo "<a href= 'logout.php' class= 'button-label'>Logout</a>";
                     }
                     else{
-                        echo "<a href= 'login.php' class= 'button-label'>Login</a>";
-                        echo "<a href= 'signup.php' class= 'button-label'>Signup</a>";
+                        echo "<a href='registration.php' class='button-label'>Register</a>";
+                        echo "<p class='small'>Already have an account? Log in!</p>";
+                        echo "<a href= 'login.php' class= 'button-label'>Login</a>"; 
                     }
                 ?>
             </div>
@@ -52,7 +55,7 @@
             <div id="about-banner" class="container">
                 <div>
                     <h3>About Us!</h3>
-                    <p>Blah blah blah</p>
+                    <p>To learn more about how the project was created, go to about us!</p>
                 </div>
                 <a class="button-label banner-button"></a>
             </div>
