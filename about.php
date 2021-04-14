@@ -26,10 +26,10 @@
         <section>
             <h1 style="padding:10px;">Description</h1>
             <p style="padding: 10px;">Welcome to the website created for Assignmnet 2 for COMP 3512 (Web 2) class at Mount Royal University where 
-                you can view all of your favorite companies and explore the different ways you can take a look at the overall financials and add cpmpanies to your own Portfolio
+                you can view all of your favourite companies and explore the different ways you can take a look at the overall financials and add companies to your own Portfolio
                 so you do not miss any updates! 
                 </br></br>
-                This course is offered by Randy Connolly and it is a third-year course for Computer information
+                This course is offered by Professor Randy Connolly and it is a third-year course for Computer information
                 Systems students which focuses on JavaScript and PHP.
             </p>
         </section>
