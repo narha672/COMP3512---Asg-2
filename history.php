@@ -27,11 +27,26 @@
     </head>
     <body>
         <!-- Top Navigation Menu -->
-        <div class="topnav" id="myTopnav">
+        <!-- <div class="topnav" id="myTopnav">
             <a href="index.php" class="active">Home</a>
             <a href="list.php">Companies</a>
             </a>
+        </div> -->
+        <header>
+            <a href="./index.php"><img src="./img/logos/logo.png" id="logo"></a>
+            <span id="hamburger-button"></span>
+        </header>
+        <!--dropdown menu bar-->
+        <div id="hamburger-menu" style="display:none;">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="list.php">Companies</a></li>
+            <li><a href="favourites.php">Favourites</a></li>
+            <li><a href="portfolio.php">Portfolio</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="logout.php">Logout</a></li>
+            <li><a href="about.php">Credits</a></li>
         </div>
+
 
         <div style="background-color:#e5e5e5;padding:10px;text-align:center;">
             <h1>Company History</h1>
@@ -76,5 +91,6 @@
             </tbody>
         </table>
     </div>
+    <script src="./js/index.js"></script>
     </body>
 </html>

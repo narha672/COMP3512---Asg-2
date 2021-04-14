@@ -24,7 +24,6 @@ header {
 
 header a {
     display: inline-block;
-    margin: 20px 20px;
     color: black;
     text-decoration: none;
     font-size: 2em;
@@ -162,13 +161,15 @@ p {
     color: white;
 }
 
+
+#logo {
+    width: var(--nav-height);
+    margin-left: 50px;
+  }
+
 @media (max-width: 813px) {
     :root {
         --nav-height: 100px;
-    }
-
-    header a {
-        margin: 30px 20px;
     }
 
     #hamburger-button {

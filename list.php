@@ -13,7 +13,7 @@
             <a href="list.php">Companies</a>
         </div> -->
         <header>
-            <a href="./index.php">Logo</a>
+            <a href="./index.php"><img src="./img/logos/logo.png" id="logo"></a>
             <span id="hamburger-button"></span>
         </header>
         <!--dropdown menu bar-->
@@ -43,7 +43,7 @@
     <!-- style="height: 700px; overflow-y: scroll" -->
         <div id="zoom-div"><img id="zoom-image" src="http://localhost/stock/img/logos/A.svg"></div>
         <div id="loading" style="text-align:center;width:100px;height:100px;"><img style="width:80px;height: 80px;object-fit:cover;text-align:center;" src="img/loading.gif"></div>
-        <table id="list-table"  style="height: 720px; overflow-y: scroll; margin: auto; width: 50%;">
+        <table id="list-table"  style="height: 720px; overflow-y: scroll; margin: auto;">
             <thead>
                 <tr>
                     <th>Logo</th>

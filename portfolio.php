@@ -26,7 +26,7 @@ if ($_SESSION["is_user_logged_in"]) {
     </head>
     <body>
         <header>
-            <a href="./index.php">Logo</a>
+            <a href="./index.php"><img src="./img/logos/logo.png" id="logo"></a>
             <span id="hamburger-button"></span>
         </header>
         <!--dropdown menu bar-->
