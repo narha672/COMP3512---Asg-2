@@ -34,7 +34,13 @@ function getCompaniesList(){
     })
     .then( res => res.json() )
     .then(response => {
-        tableRows(response["data"])
+        if (symbol.value == '') {
+            tableRows(response["data"])
+        } else {
+            const filteredData = response["data"].filter(d => d.symbol.slice(0, symbol.value.length) == symbol.value);
+            tableRows(filteredData);
+        }
+        
     }) 
     .catch(error => console.error('Error:', error));
 }

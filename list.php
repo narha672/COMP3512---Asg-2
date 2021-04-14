@@ -32,7 +32,7 @@
     
 
     <div style="background-color:#ffffff;padding:10px;text-align:center;">
-        <form id="filter-form">
+        <form id="filter-form" method="post">
             <label>Filter:</label>
             <input type="text" name="symbol" id="symbol" placeholder="Enter company symbol.." required>
             <button type="submit">Go</button><button id="btn-clear">Clear</button>
