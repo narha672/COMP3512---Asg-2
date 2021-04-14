@@ -21,6 +21,7 @@ if ($_SESSION["is_user_logged_in"]) {
     <head>
         <title>portfolio</title>
         <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport"/>
+        <!--css and js links -->
         <link rel="stylesheet" href="./css/portfolio.css"/>
         <script src="./js/index.js"></script>
     </head>
@@ -42,6 +43,7 @@ if ($_SESSION["is_user_logged_in"]) {
 
         <div id="main">
             <h2>Portfolio</h2>
+            <!--checks if user is logged then passes the values-->
             <?php
                 if ($_SESSION["is_user_logged_in"]) {
                     foreach ($portfolio as $key => $value) {
