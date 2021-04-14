@@ -16,16 +16,30 @@ $company = $statement->fetch(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Top Navigation Menu -->
+    <!-- Top Navigation Menu
     <div class="topnav" id="myTopnav">
         <a href="index.php" class="active">Home</a>
         <a href="list.php">Companies</a>
+    </div> -->
+    <header>
+        <a href="./index.php">Logo</a>
+        <span id="hamburger-button"></span>
+    </header>
+    <!--dropdown menu bar-->
+    <div id="hamburger-menu" style="display:none;">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="list.php">Companies</a></li>
+        <li><a href="favourites.php">Favourites</a></li>
+        <li><a href="portfolio.php">Portfolio</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="logout.php">Logout</a></li>
+        <li><a href="about.php">Credits</a></li>
     </div>
 
 
-    <div style="background-color:#e5e5e5;padding:10px;text-align:center;">
-        <h1>Company</h1>
-    </div>
+    <div id="main">
+        <h1 style="padding-top: 20px">Company</h1>
+    
 
     <!--single company.php table -->
 <div style="overflow:auto">
@@ -34,7 +48,7 @@ $company = $statement->fetch(PDO::FETCH_ASSOC);
     </div>
 
     <div class="single-main">
-        <h1><?=$company["name"]?></h1>
+        <h1 style="font-size: 1.5em"><?=$company["name"]?></h1>
     </div>
 
     <table class="table-single">
@@ -113,6 +127,7 @@ $company = $statement->fetch(PDO::FETCH_ASSOC);
         <tbody>
         </tbody>
     </table>
-</div>
+</div></div>
+<script src="./js/index.js"></script>
 </body>
 </html>

@@ -46,7 +46,7 @@ function tableRows(data){
     for(var i = 0; i < data.length ; i++){
         var val = data[i];
         if (darker) {
-            innerHTML += '<tr class="darker"><td class="td-logo"><img onmouseleave="hideBig(this)" onmouseenter="bigLogo(this)" src="img/logos/'+val.symbol+'.svg"></td><td><a href="single-company.php?symbol='+val.symbol+'">'+val.symbol+'</a></td><td>'+val.name+'</td></tr>';
+            innerHTML += '<tr class="darker"><td class="td-logo"><img onmouseleave="hideBig(this)" onmouseenter="bigLogo(this)" src="img/logos/'+val.symbol+'.svg"></td><td><a href="single-company.php?symbol='+val.symbol+'" >'+val.symbol+'</a></td><td>'+val.name+'</td></tr>';
             darker = false;
         } else {
             innerHTML += '<tr><td class="td-logo"><img onmouseleave="hideBig(this)" onmouseenter="bigLogo(this)" src="img/logos/'+val.symbol+'.svg"></td><td><a href="single-company.php?symbol='+val.symbol+'">'+val.symbol+'</a></td><td>'+val.name+'</td></tr>';

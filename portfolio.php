@@ -45,7 +45,8 @@ if ($_SESSION["is_user_logged_in"]) {
             <?php
                 if ($_SESSION["is_user_logged_in"]) {
                     foreach ($portfolio as $key => $value) {
-                        $total = $value['close'] * $value['amount'];
+                        $close = number_format($value['close'], 2);
+                        $total = number_format($value['close'] * $value['amount'], 2);
                         echo "<div class='container port-card' id='{$value['symbol']}'>
                             <img src='./img/logos/{$value['symbol']}.svg'>
                             <div class='port-comp-info'>
@@ -61,13 +62,13 @@ if ($_SESSION["is_user_logged_in"]) {
                                 </tr>
                                 <tr>
                                     <td>{$value['amount']}</td>
-                                    <td>{$value['close']}</td>
+                                    <td>$ {$close}</td>
                                 </tr>
                                 <tr>
                                     <th colspan='2'>Total Value</th>
                                 </tr>
                                 <tr>
-                                    <td colspan='2'>{$total}</td>
+                                    <td colspan='2' style='font-weight: bold;'>$ {$total}</td>
                             </table>
                         </div>";
                     }

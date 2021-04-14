@@ -1,3 +1,11 @@
+:root {
+  --grey: #d7dbdb;
+  --dark-grey: #a0a8aa;
+  --blue: rgb(95, 148, 216);
+  --dark-blue: rgb(88, 111, 212);
+  --nav-height: 80px;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -54,6 +62,80 @@ body {
       text-align: left;
     }
   }
+
+  
+
+  #hamburger-button {
+    float: right;
+    background-color: var(--blue);
+    background-image: url(../img/images/hamburger-icon.png);
+    background-size: 40px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    /* background-color: var(--blue); */
+    padding: 40px;
+    margin: 0;
+}
+
+#hamburger-button:hover {
+    background-color: var(--dark-blue);
+}
+
+#hamburger-menu {
+    background-color: var(--blue);
+    right: 0px;
+    width: 20%;
+    list-style: none;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+}
+
+@media screen and (max-width:620px) {
+  #hamburger-menu {
+    width: 40%;
+  }
+}
+
+
+#hamburger-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#hamburger-menu li {
+    width: 100%;
+    padding: 20px 50px 20px 20px;
+}
+
+#hamburger-menu li:hover {
+    background-color: var(--dark-blue);
+}
+
+#main {
+  margin-top: var(--nav-height);
+  text-align: center;
+}
+header {
+  background-color: var(--grey);
+  width: 100%;
+  height: var(--nav-height);
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+}
+
+header a {
+  display: inline-block;
+  margin: 20px 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: bold;
+}
 
   /* Responsive Div  */
   * {
@@ -121,6 +203,12 @@ body {
     margin: auto;
   }
 
+  td a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
   th, td {
     border: 1px solid black;
     padding: 5px;
@@ -143,7 +231,7 @@ body {
   } 
 
   thead {
-      background-color: #4CAF50;
+      background-color: var(--blue);
       color: white;
   }
 
@@ -153,7 +241,7 @@ body {
   }
 
   .table-single th {
-    background-color: #4CAF50;
+    background-color: var(--blue);
     color: white;
   }
 

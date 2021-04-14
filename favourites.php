@@ -68,14 +68,14 @@ try {
                     echo '<div class="container fav-card" id="' . $sym . '">';
                     echo    '<img src="./img/logos/' . $sym . '.svg">';
                     echo    '<div class="fav-info">';
-                    echo        '<h3 class="fav-name">' . $name . '</h3>';
-                    echo        '<p class="fav-symbol">' . $sym . '</p>';
+                    echo        '<a href="single-company.php?symbol=' . $sym . '"><h3 class="fav-name">' . $name . '</h3>';
+                    echo        '<p class="fav-symbol">' . $sym . '</p></a>';
                     echo    '</div>';
-                    echo    '<a href="./removeFromFavourites.php?symbol='. $sym .'" class="remove-button"></a>';
+                    echo    '<a href="./removeFromFavourites.php?symbol='. $sym .'" class="remove-button">Remove</a>';
                     echo '</div>';
                 }
                 // Remove All Button
-                echo '<a href="./removeFromFavourites.php?all=y" id="remove-all-button"></a>';
+                echo '<div id="remove-all-container"><a href="./removeFromFavourites.php?all=y" id="remove-all-button">Remove All</a></div>';
 
             }
             ?>
