@@ -1,5 +1,3 @@
-/* CSS for the favourites page */
-
 :root {
     --grey: #d7dbdb;
     --dark-grey: #858b8d;
@@ -49,20 +47,18 @@ p {
     background-color: var(--grey);
 }
 
-.fav-card {
-    grid-template-columns: 1fr 2fr .5fr;
-    background: var(--grey);
+.port-card {
+    grid-template-columns: 1fr 1fr 2fr;
+    background-color: var(--grey);
     margin-top: 20px;
-    vertical-align: middle;
-    height: 150px;
 }
 
-.fav-card h3 {
-    font-size: 1em;
-}
+.port-card img {
+    grid-column: 1 / 2;
 
-.fav-card img {
-    max-width: 100px;
+    max-width: 200px;
+    height: 130px;
+    margin: auto;
     padding: 10px;
 }
 
@@ -105,22 +101,6 @@ p {
 #main {
     margin-top: var(--nav-height);
     padding: 10px;
-}
-
-.remove-button {
-    background-color: var(--blue);
-}
-
-.remove-button:hover {
-    background-color: var(--dark-blue);
-}
-
-#remove-all-button {
-    background-color: var(--blue);
-}
-
-#remove-all-button:hover {
-    background-color: var(--dark-blue);
 }
 
 @media (max-width: 813px) {

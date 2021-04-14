@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $fav = [];
 if (isset($_SESSION["favourites"])) {
     $fav = $_SESSION["favourites"];

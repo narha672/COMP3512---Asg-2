@@ -3,10 +3,10 @@
 try {
     $companies = [];
     
-    if (isset($_POST["symbol"]) && !empty($_POST["symbol"])) {
+    if (isset($_GET["symbol"]) && !empty($_GET["symbol"])) {
         $sql = "SELECT * FROM companies WHERE symbol = :symbol";
         $statement = $pdo->prepare($sql);
-        $statement->bindValue(":symbol", $_POST["symbol"]);$statement -> execute();
+        $statement->bindValue(":symbol", $_GET["symbol"]);$statement -> execute();
         $companies = $statement->fetchAll(PDO::FETCH_ASSOC);
     } else {
         $sql = "SELECT * FROM companies";

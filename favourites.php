@@ -1,4 +1,5 @@
 <?php require_once('./php/config.inc.php');
+session_start();
 try {
     $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS); 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -7,8 +8,6 @@ try {
     if (isset($_SESSION["favourites"])) {
         $fav = $_SESSION["favourites"];
     }
-
-    $fav = ["A", "AAPL"];
 
     $sql = 'SELECT name, symbol FROM companies WHERE symbol IN (';
     for ($i = 0; $i < count($fav); $i++) {
@@ -44,9 +43,18 @@ try {
         </div>
 
         <div id="main">
+            <h2>Favourites</h2>
             <?php
             if (count($fav) < 1) {
                 // display if no favourites exist
+                if (isset($_SESSION["is_user_logged_in"]) && $_SESSION["is_user_logged_in"]) {
+                    echo '<div>
+                            <h3>Looks like you have no favourites!</h3>
+                            <p>In the favourites list, you can access the data for companies you want to keep track of. To add companies to your favourites,</p>
+                            <a href="list.php">Access our list of companies</a>';
+                } else {
+                    //display if not logged in
+                }
             } else {
                 foreach ($companies as $key => $value) {
                     $sym = $value["symbol"];

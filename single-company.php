@@ -84,15 +84,19 @@ $company = $statement->fetch(PDO::FETCH_ASSOC);
                 <td>
                     <?php
                     $arr = json_decode($company["financials"]);
-                    for($i = 0; $i < sizeof($arr->years) ; $i++){
-                        echo "Financial Year ".$arr->years[$i];
-                        echo "<ul>";
-                        echo "<li>Revenue: ".$arr->revenue[$i]."</li>";
-                        echo "<li>Earnings: ".$arr->earnings[$i]."</li>";
-                        echo "<li>Assets: ".$arr->assets[$i]."</li>";
-                        echo "<li>Liabilites: ".$arr->liabilities[$i]."</li>";
-                        echo "</ul>";
-                        echo "<br>";
+                    if (!is_null($arr)) {
+                        for($i = 0; $i < sizeof($arr->years) ; $i++){
+                            echo "Financial Year ".$arr->years[$i];
+                            echo "<ul>";
+                            echo "<li>Revenue: ".$arr->revenue[$i]."</li>";
+                            echo "<li>Earnings: ".$arr->earnings[$i]."</li>";
+                            echo "<li>Assets: ".$arr->assets[$i]."</li>";
+                            echo "<li>Liabilites: ".$arr->liabilities[$i]."</li>";
+                            echo "</ul>";
+                            echo "<br>";
+                        }  
+                    } else {
+                        echo "<p>No financials to show </p>";
                     }
                     ?>
                 </td>
@@ -101,7 +105,7 @@ $company = $statement->fetch(PDO::FETCH_ASSOC);
             <tr>
                 <td colspan="2" style="text-align:center;">
                     <a href="#">Edit</a>
-                    <a href="#">Add To Favorite</a>
+                    <a href="addToFavourites.php?symbol=<?=$company["symbol"]?>">Add To Favorite</a>
                     <a href="history.php?symbol=<?=$company["symbol"]?>">$ Month</a>
                 </th>
             </tr>
