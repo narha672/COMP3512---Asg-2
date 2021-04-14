@@ -62,7 +62,7 @@
             <h1><?=$company["name"]?></h1>
         </div>
 
-        <table class="table-single">
+        <table class="table-single" style="width: 70%; margin: auto;">
             <thead>
                 <tr>
                     <th><a href="history.php?symbol=<?=$company["symbol"]?>&sort=date">Date</a></th>
