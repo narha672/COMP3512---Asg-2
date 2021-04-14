@@ -1,12 +1,13 @@
 <?php
     require_once('./php/config.inc.php');
 
+    //sql query for retrieving te companies by passing in the symbol
     $sql = "SELECT * FROM companies WHERE symbol = :symbol";
     $statement = $pdo->prepare($sql);
     $statement->bindValue(":symbol", $_GET["symbol"]);$statement -> execute();
     $company = $statement->fetch(PDO::FETCH_ASSOC);
 
-
+    //sql queries for retrieving the history of the companies by passing symbol in
     $sql = "SELECT * FROM history WHERE symbol = :symbol";
     if(isset($_GET["sort"])){
         $sql .= " ORDER BY ".$_GET["sort"]." ASC";

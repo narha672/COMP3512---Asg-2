@@ -1,28 +1,30 @@
-<?php require_once('./php/config.inc.php');
-session_start();
-try {
-    $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS); 
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+<?php 
+    require_once('./php/config.inc.php');
+    session_start();
 
-    $fav = [];
-    if (isset($_SESSION["favourites"])) {
-        $fav = $_SESSION["favourites"];
+    try {
+        $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS); 
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $fav = [];
+        if (isset($_SESSION["favourites"])) {
+            $fav = $_SESSION["favourites"];
+        }
+
+        $sql = 'SELECT name, symbol FROM companies WHERE symbol IN (';
+        for ($i = 0; $i < count($fav); $i++) {
+            $sql = $sql . "'{$fav[$i]}', ";
+            // if (array_key_exists($i + 1, $fav))
+            //     echo ", ";
+        }
+        $sql = $sql . "'') ORDER BY symbol";
+
+        $result = $pdo -> query($sql);
+        $companies = $result -> fetchAll();
+        $pdo = null;
+    } catch (PDOException $e) {
+        die($e->getMessage());
     }
-
-    $sql = 'SELECT name, symbol FROM companies WHERE symbol IN (';
-    for ($i = 0; $i < count($fav); $i++) {
-        $sql = $sql . "'{$fav[$i]}', ";
-        // if (array_key_exists($i + 1, $fav))
-        //     echo ", ";
-    }
-    $sql = $sql . "'') ORDER BY symbol";
-
-    $result = $pdo -> query($sql);
-    $companies = $result -> fetchAll();
-    $pdo = null;
-} catch (PDOException $e) {
-    die($e->getMessage());
-}
 ?>
 <DOCTYPE html>
 <html>
